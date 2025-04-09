@@ -3,6 +3,15 @@ revision = 1
 requires-python = ">=3.13"
 
 [[package]]
+name = "64"
+version = "0.0.1.dev1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/33/cb/44d612baacb8e1122636215859c1c81bed02b38626abf263614cd16d8dac/64-0.0.1.dev1.tar.gz", hash = "sha256:d77e644de637033e23e2ab08072e43b64cc5e5ca3ce7b622fc39b88b7d9a465e", size = 2176 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/97/41/42dbab3656c6d23e55ac43ab41d39b8f34906097de17f3d020e301756a69/64-0.0.1.dev1-py3-none-any.whl", hash = "sha256:1bc49338a9eed5b5da5e1518cf3478572d74df424943d9619bf1b8d7cb0a0d02", size = 2335 },
+]
+
+[[package]]
 name = "altair"
 version = "5.5.0"
 source = { registry = "https://pypi.org/simple" }
@@ -48,6 +57,12 @@ sdist = { url = "https://files.pythonhosted.org/packages/5a/b0/1367933a8532ee6ff
 wheels = [
     { url = "https://files.pythonhosted.org/packages/77/06/bb80f5f86020c4551da315d78b3ab75e8228f89f0162f2c3a819e407941a/attrs-25.3.0-py3-none-any.whl", hash = "sha256:427318ce031701fea540783410126f03899a97ffc6f61596ad581ac2e40e3bc3", size = 63815 },
 ]
+
+[[package]]
+name = "base"
+version = "0.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/fd/39/e6ff597765d1ff30ba1bfcc80f4c98c74e93c9f31103e6b326d92f7e4192/base-0.0.0.tar.gz", hash = "sha256:feb97f56b135b56e9c853c63b5440482aff2ae8a5964ec299c49c0788843391a", size = 622 }
 
 [[package]]
 name = "blinker"
@@ -694,6 +709,8 @@ name = "streamlit-text-to-image"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "64" },
+    { name = "base" },
     { name = "openai" },
     { name = "python-dotenv" },
     { name = "rich" },
@@ -702,6 +719,8 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "64", specifier = ">=0.0.1.dev1" },
+    { name = "base", specifier = ">=0.0.0" },
     { name = "openai", specifier = ">=1.70.0" },
     { name = "python-dotenv", specifier = ">=1.1.0" },
     { name = "rich", specifier = ">=14.0.0" },
